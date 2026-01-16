@@ -1,0 +1,25 @@
+[package]
+name = "releaseutils"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "rel"
+
+[[bin]]
+name = "rel-server"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+warp = { version = "0.4", features = ["server"] }
+log = "0.4"
+serde_derive = "1.0.228"
+serde = "1.0.228"
+gitlab = "0.1806.0"
+fern = { version = "0.7", features = ["colored"] }
+humantime = "2.3.0"
+clap = { version = "4.5.53", features = ["derive"] }
+diesel = { version = "2.3.5", features = ["sqlite", "returning_clauses_for_sqlite_3_35", "r2d2"] }
+dotenvy = "0.15.7"
+r2d2 = "0.8.10"
+diesel_migrations = { version = "2.3.1", features = ["sqlite"] }
